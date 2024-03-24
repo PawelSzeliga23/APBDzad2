@@ -23,7 +23,6 @@ public class LiquidContainer : Container, IHazardNotifier
 
     public void Notify()
     {
-        var parts = _serialNumber.Split("-");
-        Console.WriteLine("Attention! Hazard at liquid container number:" + parts[2]);
+        Console.WriteLine("Attention! Hazard at liquid container number:" + Number);
     }
 }

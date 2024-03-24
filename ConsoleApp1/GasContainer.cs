@@ -12,12 +12,16 @@ public class GasContainer : Container, IHazardNotifier
 
     public void Notify()
     {
-        var parts = _serialNumber.Split("-");
-        Console.WriteLine("Attention! Hazard at gas container number:" + parts[2]);
+        Console.WriteLine("Attention! Hazard at gas container number:" + _number);
     }
 
     public override void Unload()
     {
         _mass *= 0.05;
+    }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()}, Psi: {_psi}";
     }
 }
